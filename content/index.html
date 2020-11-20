@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>503 Service Unavailable</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="11" />
+    <style>
+      body {
+        background-color: #3c6382;
+        color: white;
+        text-align: center;
+      }
+      body > * {
+        font-family: monospace;
+      }
+      h3 {
+        margin-bottom: 2em;
+      }
+      p {
+        border-left: 10px solid rgba(0, 0, 0, 0.36);
+        background-color: rgba(0, 0, 0, 0.18);
+        text-align: left;
+        text-indent: 1em;
+        padding: 10px;
+        line-height: 2em;
+      }
+      p > span {
+        display: block;
+      }
+      p > span > a {
+        color: orange !important;
+        text-decoration: none;
+      }
+      p > span > a:hover {
+        font-weight: bold;
+      }
+    </style>
+
+    <style>
+      .lds-ripple {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-ripple div {
+        position: absolute;
+        border: 4px solid #fff;
+        opacity: 1;
+        border-radius: 50%;
+        animation: lds-ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      }
+      .lds-ripple div:nth-child(2) {
+        animation-delay: -1s;
+      }
+      @keyframes lds-ripple {
+        0% {
+          top: 36px;
+          left: 36px;
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+        100% {
+          top: 0px;
+          left: 0px;
+          width: 72px;
+          height: 72px;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lds-ripple">
+      <div></div>
+      <div></div>
+    </div>
+    <h1>Le service demandé n'est pas disponible.</h1>
+    <h3>Cette page se rafraîchira dans <span id="timer">10 secondes</span>.</h3>
+
+    <p>
+      <span>Il se peut que :</span>
+      <span
+        >- le service ne soit pas encore disponible ou plus disponible, vérifiez
+        que l'icône de disponibilité est verte.</span
+      >
+      <span>- que l'url demandée ne soit pas valable.</span>
+      <span
+        >Vous pouvez contacter le
+        <a
+          href="https://rocket-chat.stable.innovation.insee.eu/channel/onyxia_users"
+          >channel sur rocket chat</a
+        >.</span
+      >
+    </p>
+
+    <script>
+      let time = 10;
+      const showTimer = () =>
+        (document.getElementById("timer").innerHTML = `${time--} seconde${
+          time > 0 ? "s" : ""
+        }`);
+      setInterval(showTimer, 1000);
+    </script>
+  </body>
+</html>
