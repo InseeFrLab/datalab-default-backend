@@ -2,7 +2,7 @@
   <head>
     <title>503 Service Unavailable</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="11" />
+    <meta http-equiv="refresh" content="3" />
     <style>
       body {
         background-color: #3c6382;
@@ -76,7 +76,7 @@
       <div></div>
     </div>
     <h1>Le service demandé n'est pas disponible.</h1>
-    <h3>Cette page se rafraîchira dans <span id="timer">10 secondes</span>.</h3>
+    <h3>Cette page se rafraîchira dans <span id="timer">2 secondes</span>.</h3>
 
     <p>
       <span>Il se peut que :</span>
@@ -94,7 +94,7 @@
     </p>
 
     <script>
-      let time = 10;
+      let time = 2;
       const showTimer = () =>
         (document.getElementById("timer").innerHTML = `${time--} seconde${
           time > 0 ? "s" : ""
