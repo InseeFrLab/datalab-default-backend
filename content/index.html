@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>503 Service Unavailable</title>
+    <title>Scheduled maintenance in progress</title>
     <meta charset="UTF-8" />
     <meta http-equiv="refresh" content="11" />
     <style>
@@ -75,31 +75,14 @@
       <div></div>
       <div></div>
     </div>
-    <h1>Le service demandé n'est pas disponible.</h1>
-    <h3>Cette page se rafraîchira dans <span id="timer">10 secondes</span>.</h3>
-
-    <p>
-      <span>Il se peut que :</span>
-      <span
-        >- le service ne soit pas encore disponible ou plus disponible, vérifiez
-        que l'icône de disponibilité est verte.</span
-      >
-      <span>- que l'url demandée ne soit pas valable.</span>
-      <span
-        >Vous pouvez contacter le support sur 
-        <a
-          href="https://www.tchap.gouv.fr/#/room/#SSPCloudXDpAw6v:agent.finances.tchap.gouv.fr"
-          >Tchap (agents de la fonction publique)</a
-        > ou sur <a href="https://join.slack.com/t/3innovation/shared_invite/zt-1hnzukjcn-6biCSmVy4qvyDGwbNI~sWg">Slack (canal #sspcloud)</a>.</span>
-    </p>
-
-    <script>
-      let time = 10;
-      const showTimer = () =>
-        (document.getElementById("timer").innerHTML = `${time--} seconde${
-          time > 0 ? "s" : ""
-        }`);
-      setInterval(showTimer, 1000);
-    </script>
+    <h1>A scheduled maintenance is currently in progress</h1>
+    <h3>We are reinstalling our storage backend (s3 / minIO). See here for more details : https://github.com/InseeFrLab/sspcloud/issues/22</span>.<br />
+    Maintenance is scheduled from Friday 14th 18:00 (Paris time) to monday 17th morning</h3>
+    <span
+    >Vous pouvez contacter le support sur 
+    <a
+      href="https://www.tchap.gouv.fr/#/room/#SSPCloudXDpAw6v:agent.finances.tchap.gouv.fr"
+      >Tchap (agents de la fonction publique)</a
+    > ou sur <a href="https://join.slack.com/t/3innovation/shared_invite/zt-1hnzukjcn-6biCSmVy4qvyDGwbNI~sWg">Slack (canal #sspcloud)</a>.</span>
   </body>
 </html>
